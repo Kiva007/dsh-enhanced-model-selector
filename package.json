@@ -1,0 +1,25 @@
+{
+  "name": "dsh-enhanced-model-selector",
+  "version": "0.1.0",
+  "description": "DSH plugin that enhances the model selector with provider filtering chips and provider name display in the collapsed trigger.",
+  "private": true,
+  "type": "module",
+  "main": "lib/client.js",
+  "exports": {
+    ".": "./lib/client.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "license": "MIT",
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web"
+    }
+  }
+}
