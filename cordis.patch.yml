@@ -1,6 +1,8 @@
 # dsh-enhanced-model-selector bundle patch.
-# Pure client plugin — no host row needed. The browser half auto-registers
-# via the package.json dsh.client declaration (client registry serves lib/client.js).
-# This file exists so dsh.bundle.patch is declared, making DSH recognize
-# this package as a profile layer (not just a plain dependency).
-[]
+# Inserts the plugin row into the profile's Cordis loader roster.
+# The browser half rides the package's dsh.client manifest (the client
+# registry serves lib/client.js); this row creates the loader entry/fiber
+# that makes client-modules recognize the package as a live client bundle.
+- insert:
+    - id: dsh-enhanced-model-selector
+      name: 'dsh-enhanced-model-selector'
